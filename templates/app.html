@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="app-body">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="sidebar-title">Notes</h1>
+            <button id="new-note-btn" class="btn-primary">New Note</button>
+        </div>
+        
+        <div class="notes-list" id="notes-list">
+            <!-- Notes will be populated here by JS -->
+        </div>
+        
+        <div class="sidebar-footer">
+            <span id="logged-in-user" class="user-name">...</span>
+            <a href="#" id="logout-btn" class="logout-link">Logout</a>
+        </div>
+    </div>
+    
+    <div class="editor-container">
+        <div id="empty-state" class="empty-state">
+            <p>Select or create a note</p>
+        </div>
+        
+        <div id="editor" class="editor hidden">
+            <div class="editor-header">
+                <input type="text" id="note-title" class="title-input" placeholder="Note Title">
+                <span id="save-status" class="save-status">Saved</span>
+            </div>
+            <textarea id="note-body" class="body-textarea" placeholder="Start typing your note here..."></textarea>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
